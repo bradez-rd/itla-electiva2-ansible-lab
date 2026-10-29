@@ -1,0 +1,20 @@
+x-server: &server
+  build: .
+  restart: unless-stopped
+
+services:
+  server1:
+    <<: *server
+    ports: ["2221:22"]
+  server2:
+    <<: *server
+    ports: ["2222:22"]
+  server3:
+    <<: *server
+    ports: ["2223:22"]
+  server4:
+    <<: *server
+    ports: ["2224:22"]
+  server5:
+    <<: *server
+    ports: ["2225:22"]
